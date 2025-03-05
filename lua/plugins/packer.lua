@@ -10,8 +10,8 @@ return require("packer").startup(function(use)
     requires = { 
       {'nvim-lua/plenary.nvim'},
       {'nvim-telescope/telescope-fzf-native.nvim', 
-        build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release \z
-        && cmake --build build --config Release'},
+      build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release \z
+      && cmake --build build --config Release'},
     }
   }
 
@@ -19,4 +19,13 @@ return require("packer").startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+  require("packer").startup(function()
+    use({
+      "stevearc/conform.nvim",
+      config = function()
+        require("conform").setup()
+      end,
+    })
+  end)
 end)

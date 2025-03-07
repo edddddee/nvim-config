@@ -20,12 +20,12 @@ return require("packer").startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
-  require("packer").startup(function()
-    use({
-      "stevearc/conform.nvim",
-      config = function()
-        require("conform").setup()
-      end,
-    })
-  end)
+  use('brenoprata10/nvim-highlight-colors')
+
+  use({
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup()
+    end,
+  })
 end)

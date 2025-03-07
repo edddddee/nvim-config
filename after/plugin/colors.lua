@@ -1,11 +1,6 @@
--- Transparent background color (use terminal settings)
---vim.cmd("hi Normal guibg=none")
 
--- Black background color
---vim.cmd("hi Normal guibg=#000000")
-
--- Set colorscheme
 vim.cmd("colorscheme slate")
+-- custom modifications (more visible comments among other things)
 vim.api.nvim_set_hl(0, "Normal", { bg = "#1f2936", fg = "#dbdbdb" }) 
 vim.api.nvim_set_hl(0, "CursorLine", { bg = "#33455c" }) 
 vim.api.nvim_set_hl(0, "Comment", { fg = "#85ffc4" }) 

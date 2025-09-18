@@ -15,9 +15,9 @@ vim.opt.signcolumn = "number"
 vim.opt.cursorline = true
 
 -- Indentation is two spaces 
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
@@ -41,8 +41,8 @@ vim.opt.scrolloff = 3
 -- Faster update time (default=400 [ms])
 vim.opt.updatetime = 250
 
--- Highlight column 80
-vim.opt.colorcolumn = "81"
+-- Highlight column #
+vim.opt.colorcolumn = "101"
 
 -- Configure default shell (on windows)
 if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then

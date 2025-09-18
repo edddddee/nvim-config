@@ -30,7 +30,8 @@ vim.keymap.set("n", "<Leader>t", function()
   end
   -- If no terminal is found, open a new terminal in a right split and go into insert mode
   if not found_terminal then
-    vim.cmd("rightbelow 85 vsplit | terminal")  -- Open terminal in a right split
+    vim.cmd("rightbelow vsplit | terminal") -- Open terminal in a right split
+    vim.cmd("vertical resize " .. math.floor(vim.o.columns * 0.42))
     vim.cmd("startinsert")  -- Enter insert mode immediately
   end
 end, { noremap = true, silent = true })

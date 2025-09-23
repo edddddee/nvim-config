@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require("nvim-treesitter.configs").setup {
   ensure_installed = { "cpp", "c" }, -- or "all"
   highlight = {
     enable = true,
@@ -8,3 +8,4 @@ require'nvim-treesitter.configs'.setup {
     },
   },
 }
+

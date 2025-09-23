@@ -42,16 +42,20 @@ vim.opt.scrolloff = 3
 vim.opt.updatetime = 250
 
 -- Highlight column #
-vim.opt.colorcolumn = "101"
+vim.opt.colorcolumn = "91"
 
 -- Configure default shell (on windows)
 if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
-  vim.opt.shell = "pwsh.exe"
-  -- Adjust how commands are passed to PowerShell
-  vim.o.shellxquote = ""
-  vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
-  vim.o.shellquote = ""
-  -- Redirect output to a UTF-8 encoded file
-  vim.o.shellpipe = "| Out-File -Encoding UTF8 %s"
-  vim.o.shellredir = "| Out-File -Encoding UTF8 %s"
+    if vim.fn.executable("nu.exe") == 1 then
+        vim.opt.shell = "nu.exe"
+    else
+        vim.opt.shell = "pwsh.exe"
+        -- Adjust how commands are passed to PowerShell
+        vim.o.shellxquote = ""
+        vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
+        vim.o.shellquote = ""
+        -- Redirect output to a UTF-8 encoded file
+        vim.o.shellpipe = "| Out-File -Encoding UTF8 %s"
+        vim.o.shellredir = "| Out-File -Encoding UTF8 %s"
+    end
 end

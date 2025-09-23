@@ -1,13 +1,23 @@
-require("onedark").setup {
-  style = "deep",
-  toggle_style_key = "<F12>",
+require("onedarkpro").setup {
   highlights = {
-    ["@comment"] = { fg = "#85ffc4", fmt = "none" },
-    Comment = { fg = "#85ffc4", fmt = "none" },
+    ["@comment"] = { fg = "#85ffc4" },
+    Comment = { fg = "#85ffc4" },
     Visual = { bg = "#254059" },
   },
 }
-require("onedark").load()
+require("onedarkpro").load()
+vim.cmd("colorscheme onedark_dark")
+
+--require("onedark").setup {
+--  style = "deep",
+--  toggle_style_key = "<F12>",
+--  highlights = {
+--    ["@comment"] = { fg = "#85ffc4", fmt = "none" },
+--    Comment = { fg = "#85ffc4", fmt = "none" },
+--    Visual = { bg = "#254059" },
+--  },
+--}
+--require("onedark").load()
 
 --require("tokyonight").setup {
 --    style = "moon",

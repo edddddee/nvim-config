@@ -1,12 +1,12 @@
-require("onedarkpro").setup {
-  highlights = {
-    ["@comment"] = { fg = "#85ffc4" },
-    Comment = { fg = "#85ffc4" },
-    Visual = { bg = "#254059" },
-  },
-}
-require("onedarkpro").load()
-vim.cmd("colorscheme onedark_dark")
+vim.cmd("colorscheme minimal")
+--require("onedarkpro").setup {
+--  highlights = {
+--    ["@comment"] = { fg = "#85ffc4" },
+--    Comment = { fg = "#85ffc4" },
+--    Visual = { bg = "#254059" },
+--  },
+--}
+--require("onedarkpro").load()
 
 --require("onedark").setup {
 --  style = "deep",

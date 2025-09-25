@@ -1,17 +1,21 @@
 return require("packer").startup(function(use)
-    -- Packer manages itself
+    -- packer manages itself
     use "wbthomason/packer.nvim"
 
-    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-    --use("nvim-treesitter/nvim-treesitter-context")
+    -- undotree
+    use 'mbbill/undotree'
 
-    -- Themes
+    -- treesitter
+    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+
+    -- colorschemes
     use "navarasu/onedark.nvim"
     use "olimorris/onedarkpro.nvim"
     use "folke/tokyonight.nvim"
     use "n1ghtmare/noirblaze-vim"
     use "edddddee/minimal.nvim"
 
+    -- telescope
     use {
         "nvim-telescope/telescope.nvim", tag = "0.1.8",
         requires = { 
@@ -22,13 +26,16 @@ return require("packer").startup(function(use)
         }
     }
 
+    -- lualine
     use {
         "nvim-lualine/lualine.nvim",
         requires = { "nvim-tree/nvim-web-devicons", opt = true }
     }
 
+    -- highlight colors
     use("brenoprata10/nvim-highlight-colors")
 
+    -- conform
     use({
         "stevearc/conform.nvim",
         config = function()

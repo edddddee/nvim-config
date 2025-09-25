@@ -13,6 +13,34 @@ vim.keymap.set("n", ">", ">>", { silent = true, desc = "Indent" })
 vim.keymap.set("v", "<", "<gv", { silent = true, desc = "Indent" })
 vim.keymap.set("v", ">", ">gv", { silent = true, desc = "Outdent" })
 
+-- Move visual blocks
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Keep cursor centered
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- Paste over visual without replacing default register
+vim.keymap.set("x", "<leader>p", "\"_dP")
+
+-- Yank to system clipboard easier
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- Delete to void regiser
+vim.keymap.set("n", "<leader>d", "\"_d")
+vim.keymap.set("v", "<leader>d", "\"_d")
+
+-- Treat <C-c> as <Esc> in insert mode
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Keep cursor static when joining lines
+vim.keymap.set("n", "J", "mzJ`z")
+
 -- Keymap to either switch to an existing terminal or open a new terminal
 -- in a right split
 vim.keymap.set("n", "<Leader>t", function()

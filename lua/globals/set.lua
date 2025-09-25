@@ -21,8 +21,8 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
--- Enable word wrapping
-vim.opt.wrap = true
+-- Word wrapping
+vim.opt.wrap = false 
 
 -- Disable swapfiles and backups, enable undofiles
 vim.opt.swapfile = false

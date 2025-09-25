@@ -1,7 +1,15 @@
 require('telescope').setup {
+    defaults = {
+        file_ignore_patterns = {
+            "%.png",
+            "%.bmp",
+            "%.wav",
+            "%.obj",
+        },
+    },
     pickers = {
         find_files = {
-            no_ignore=true,
+            --no_ignore=true,
             --theme = ""
         },
         live_grep = {
@@ -9,7 +17,7 @@ require('telescope').setup {
         },
         help_tags = {
             theme = "ivy",
-        }
+        },
     },
 }
 
